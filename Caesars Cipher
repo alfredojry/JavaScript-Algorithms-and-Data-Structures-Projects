@@ -1,0 +1,7 @@
+function rot13(str) { // LBH QVQ VG!
+  
+  return String.fromCharCode(...str.split(/(?=.)/).map(char => char.charCodeAt(0)).map(num => num >= 65 && num <= 90 ? num > 77 ? num - 13 : num + 13 : num));
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
